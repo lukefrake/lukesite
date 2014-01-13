@@ -1,0 +1,25 @@
+{
+  "name": "lukesite",
+  "version": "0.0.1",
+  "description": "Luke's site",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lukefrake/lukesite.git"
+  },
+  "author": "",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "7cb2c670a9180aeeddc026034ba64e7b6434bc86",
+  "bugs": {
+    "url": "https://github.com/lukefrake/lukesite/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-sass": "~0.6.0"
+  }
+}
