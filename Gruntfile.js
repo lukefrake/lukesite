@@ -16,7 +16,7 @@ module.exports = function(grunt) {
 		watch: {
 			css: {
 				files: 'styles/*.scss',
-				tasks: ['sass', 'notify:sass', 'cssmin'],
+				tasks: ['sass', 'notify:sass', 'uncss', 'cssmin'],
 			},
 			options: {
 				livereload: true,
@@ -30,6 +30,14 @@ module.exports = function(grunt) {
 					message: 'Look... SASS has converted to CSS', //required
 				}
 			},
+		},
+
+		uncss: {
+			dist: {
+				files: {
+					'styles/styles.css': ['index.html']
+				}
+			}
 		},
 
 		cssmin: {
@@ -46,6 +54,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-notify');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-uncss');
 	grunt.registerTask('default', ['watch']);
 
 };
