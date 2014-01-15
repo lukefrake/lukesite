@@ -1,3 +1,4 @@
 node_modules
+src/styles/.sass-cache/
 src/styles/.sass-cache/*
 npm-debug.log
