@@ -1,22 +1,33 @@
 module.exports = function(grunt) {
 
 	grunt.initConfig({
-		sass: {                              // Task
-			dist: {                            // Target
-				options: {                       // Target options
+
+	  connect: {
+	    server: {
+	      options: {
+	      	port: '8888',
+				  target: 'http://localhost:8888', // target url to open
+				  appName: 'Google Chrome', // name of the app that opens, ie: open, start, xdg-open
+        }
+      }
+	  },
+
+		sass: {
+			dist: {
+				options: {
 					style: 'expanded',
-					cacheLocation: 'styles/.sass-cache'
+					cacheLocation: 'src/styles/.sass-cache'
 				},
-				files: {                         // Dictionary of files
-					'styles/styles.css': 'styles/styles.scss',       // 'destination': 'source'
+				files: {
+					'dist/css/styles.css': 'src/styles/styles.scss',
 				}
 			}
 		},
 
 		watch: {
 			css: {
-				files: 'styles/*.scss',
-				tasks: ['sass', 'notify:sass', 'uncss', 'cssmin'],
+				files: 'src/styles/*.scss',
+				tasks: ['sass', 'notify:sass', 'cssmin', 'uncss', 'sizediff'],
 			},
 			options: {
 				livereload: true,
@@ -34,17 +45,23 @@ module.exports = function(grunt) {
 
 		uncss: {
 			dist: {
-				files: {
-					'styles/styles.css': ['index.html']
-				}
+	      files: [
+	        { src: '*.html', dest: 'dist/css/styles.min.css'}
+	      ]
 			}
 		},
 
 		cssmin: {
 			combine: {
-				files: {
-					'styles/styles.min.css': ['styles/styles.css']
-				}
+		    files: {
+		      'dist/css/styles.min.css': ['dist/css/styles.css']
+		    }
+			}
+		},
+
+		sizediff: {
+			dist: {
+				src: ['dist/css/styles.css', 'dist/css/styles.min.css']
 			}
 		}
 
@@ -55,6 +72,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-notify');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-uncss');
-	grunt.registerTask('default', ['watch']);
+	grunt.loadNpmTasks('grunt-sizediff');
+	grunt.loadNpmTasks('grunt-contrib-connect');
+	grunt.registerTask('default', ['connect', 'watch']);
 
 };
