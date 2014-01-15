@@ -61,3 +61,7 @@ body {
     width: 1170px;
   }
 }
+
+.container {
+  color: #00f;
+}

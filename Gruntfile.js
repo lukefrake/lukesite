@@ -27,7 +27,7 @@ module.exports = function(grunt) {
 		watch: {
 			css: {
 				files: 'src/styles/*.scss',
-				tasks: ['sass', 'notify:sass', 'cssmin', 'uncss', 'sizediff'],
+				tasks: ['sass', 'cssmin', 'uncss', 'sizediff', 'notify:main'],
 			},
 			options: {
 				livereload: true,
@@ -35,10 +35,10 @@ module.exports = function(grunt) {
 		},
 
 		notify: {
-			sass: {
+			main: {
 				options: {
-					title: 'Task Complete',  // optional
-					message: 'Look... SASS has converted to CSS', //required
+					title: 'Woah there!',
+					message: 'Just compiled sass, smushed CSS, removed unused CSS, compaired the size against the server and now I am telling you about it!',
 				}
 			},
 		},
