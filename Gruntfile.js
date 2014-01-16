@@ -2,15 +2,16 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 
-	  connect: {
-	    server: {
-	      options: {
-	      	port: '8888',
-				  target: 'http://localhost:8888', // target url to open
-				  appName: 'Google Chrome', // name of the app that opens, ie: open, start, xdg-open
-        }
-      }
-	  },
+		connect: {
+			server: {
+				options: {
+					port: '8888',
+					target: 'http://localhost:8888',
+					appName: 'Google Chrome',
+					base: 'dist/',
+				}
+			}
+		},
 
 		sass: {
 			dist: {
@@ -27,7 +28,11 @@ module.exports = function(grunt) {
 		watch: {
 			css: {
 				files: 'src/styles/*.scss',
-				tasks: ['sass', 'cssmin', 'uncss', 'sizediff', 'notify:main'],
+				tasks: ['sass', 'cssmin', 'uncss', 'sizediff', 'notify:css'],
+			},
+			pages: {
+				files: 'src/pages/*',
+				tasks: ['staticHandlebars', 'notify:template'],
 			},
 			options: {
 				livereload: true,
@@ -35,27 +40,33 @@ module.exports = function(grunt) {
 		},
 
 		notify: {
-			main: {
+			css: {
 				options: {
 					title: 'Woah there!',
-					message: 'Just compiled sass, smushed CSS, removed unused CSS, compaired the size against the server and now I am telling you about it!',
+					message: 'SASS is now CSS',
 				}
 			},
+			template: {
+				options: {
+					title: 'Woah there!',
+					message: 'Templates updated',
+				}
+			},			
 		},
 
 		uncss: {
 			dist: {
-	      files: [
-	        { src: '*.html', dest: 'dist/css/styles.min.css'}
-	      ]
+				files: [
+					{ src: '*.html', dest: 'dist/css/styles.min.css'}
+				]
 			}
 		},
 
 		cssmin: {
 			combine: {
-		    files: {
-		      'dist/css/styles.min.css': ['dist/css/styles.css']
-		    }
+				files: {
+					'dist/css/styles.min.css': ['dist/css/styles.css']
+				}
 			}
 		},
 
@@ -63,7 +74,33 @@ module.exports = function(grunt) {
 			dist: {
 				src: ['dist/css/styles.css', 'dist/css/styles.min.css']
 			}
-		}
+		},
+
+		staticHandlebars: {
+			options: {
+		    assets:{
+	        packagedFilesPath:'.', //optional
+	        partialExtension: 'html', //optional
+		    },
+		    json: '{}', //optional
+		    sourceView:true //optional
+			},
+			pages: {
+        // Target-specific file lists and/or options go here.
+        options:{
+          json:''
+        },
+				files:{'dist/index.html':'src/pages/index.hbt'}
+   		},
+	    complexTarget: {
+        options:{
+          assets:{
+        	  json:''
+          }
+        },
+        files:{'dist/html/*.html':'src/pages/*.hbt'}
+	    }  		
+		},
 
 	});	
 	
@@ -74,6 +111,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-uncss');
 	grunt.loadNpmTasks('grunt-sizediff');
 	grunt.loadNpmTasks('grunt-contrib-connect');
+	grunt.loadNpmTasks('grunt-static-handlebars');
 	grunt.registerTask('default', ['connect', 'watch']);
 
 };
