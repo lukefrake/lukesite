@@ -79,7 +79,7 @@ module.exports = function(grunt) {
 		staticHandlebars: {
 			options: {
 		    assets:{
-	        packagedFilesPath:'.', //optional
+	        filesRoot:'src/', //optional
 	        partialExtension: 'html', //optional
 		    },
 		    json: '{}', //optional
