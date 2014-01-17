@@ -42,11 +42,11 @@ module.exports = function(grunt) {
 		staticHandlebars: {
 			options: {
 				assets:{
-					filesRoot:'src/', //optional
-					partialExtension: 'partial', //optional
+					filesRoot:'src/',
+					partialExtension: 'partial',
 				},
-				json: 'src/pages/default.json', //optional
-				sourceView:true //optional
+				json: 'src/pages/default.json',
+				sourceView:true
 			},
 			pages: {
 				files:{'dist/*.html':'src/pages/*.hbt'}

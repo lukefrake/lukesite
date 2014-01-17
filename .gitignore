@@ -4,3 +4,4 @@ src/styles/.sass-cache/*
 npm-debug.log
 src/js-dev
 src/js-dev/*
+src/index.html
