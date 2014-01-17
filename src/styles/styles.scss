@@ -1,3 +1,10 @@
 // Import some of bootstrap because I can be lazy
 @import 'normalize';
 @import 'grid';
+
+nav ul {
+	display: inline-block;
+	li {
+		float: left;
+	}
+}
