@@ -1,0 +1,3 @@
+{{> header}}
+		<div class="container">Hey</div>
+{{> footer}}

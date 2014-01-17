@@ -31,11 +31,25 @@ module.exports = function(grunt) {
 				tasks: ['sass', 'cssmin', 'uncss', 'sizediff', 'notify:css'],
 			},
 			pages: {
-				files: 'src/pages/*',
-				tasks: ['staticHandlebars', 'notify:template'],
+				files: ['src/pages/*.hbt', 'src/partials/*.partial', 'src/pages/*.json'],
+				tasks: ['staticHandlebars:pages', 'notify:template'],
 			},
 			options: {
 				livereload: true,
+			},
+		},
+
+		staticHandlebars: {
+			options: {
+				assets:{
+					filesRoot:'src/', //optional
+					partialExtension: 'partial', //optional
+				},
+				json: 'src/pages/default.json', //optional
+				sourceView:true //optional
+			},
+			pages: {
+				files:{'dist/*.html':'src/pages/*.hbt'}
 			},
 		},
 
@@ -74,32 +88,6 @@ module.exports = function(grunt) {
 			dist: {
 				src: ['dist/css/styles.css', 'dist/css/styles.min.css']
 			}
-		},
-
-		staticHandlebars: {
-			options: {
-		    assets:{
-	        filesRoot:'src/', //optional
-	        partialExtension: 'html', //optional
-		    },
-		    json: '{}', //optional
-		    sourceView:true //optional
-			},
-			pages: {
-        // Target-specific file lists and/or options go here.
-        options:{
-          json:''
-        },
-				files:{'dist/index.html':'src/pages/index.hbt'}
-   		},
-	    complexTarget: {
-        options:{
-          assets:{
-        	  json:''
-          }
-        },
-        files:{'dist/html/*.html':'src/pages/*.hbt'}
-	    }  		
 		},
 
 	});	

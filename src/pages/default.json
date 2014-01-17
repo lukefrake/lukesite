@@ -1,0 +1,8 @@
+{
+	"pageTitle": "Not's Website",
+	"css": "/css/styles.min.css",
+	"partials": [
+    "header",
+    "footer"
+  ]
+}
