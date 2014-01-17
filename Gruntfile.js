@@ -71,7 +71,7 @@ module.exports = function(grunt) {
 		uncss: {
 			dist: {
 				files: {
-					'dist/css/tidy.css': ['src/pages/*.html','src/partials/*.partial'],
+					'dist/css/styles.min.css': ['dist/index.html','dist/**/*.html'],
 				}
 			}
 		},

@@ -1196,4 +1196,5 @@ nav ul {
 }
 nav ul li {
   float: left;
+  display: none;
 }
