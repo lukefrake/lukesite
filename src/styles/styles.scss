@@ -2,10 +2,16 @@
 @import 'normalize';
 @import 'grid';
 
-nav ul {
-	display: inline-block;
-	li {
-		float: left;
-		display: none;
-	}
+@import 'mixins';
+
+body {
+	background: $backgroundColor;
 }
+
+main.container {
+	background: url('/motion.gif') no-repeat right -90px;
+	height: 420px;
+}
+
+// My styles
+@import 'navbar';

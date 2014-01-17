@@ -1,0 +1,85 @@
+.nav {
+	background-color: $navBackgroundColor;
+	color: $navColor;
+	margin: 0;
+	padding: 20px 0;
+	.logo {
+		float: left;
+		display: inline-block;
+	}
+	.logo, ul {
+		margin: 0;
+		font-size: 1.2em;
+	}
+}
+
+.menu {
+	float: right;
+	&.active {
+		clear: both;
+		width: 100%;
+		ul {
+			display: block;
+			padding: 0;
+		}
+	}
+	ul {
+		display: none;
+		margin-top: 20px;
+	}
+	li {
+		display: block;
+		border-top: 1px solid $navBorder;
+		text-align: right;
+		&:first-child {
+			border-top: 0;
+		}
+	}	
+	a {
+		color: $navColor;
+		text-decoration: none;
+		&:hover, &:visited {
+			color: $navColor;
+		}
+	}
+}
+
+.burger {
+	float: right;
+	cursor: pointer;
+	margin-top: 2px;
+	&:before {
+		content:"\2630";
+		text-rendering: geometricPrecision;
+		font-size: 20px;
+		line-height: 1em;
+	}
+}
+
+@media all and (min-width: $screen-xs) {
+	.menu {
+		ul {
+			display: block;
+			width: auto;
+			clear: none;
+			margin: 0;
+		}
+		li {
+			display: inline-block;
+			border-top: 0;
+			border-left: 1px solid $navBorder;
+			padding-left: 5px;
+			&:first-child {
+				padding: 0;
+				border: 0;
+			}
+		}
+		&.active {
+			width: auto;
+			clear: none;
+		}
+	}
+	.burger {
+		display: none;
+	}
+}

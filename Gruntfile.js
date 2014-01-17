@@ -1,6 +1,15 @@
 module.exports = function(grunt) {
 
+	// Configurable paths and globs
+	var buildConfig = {
+		srcStyles: 'src/styles/',
+		srcPages: 'src/pages/',
+		srcPartials: 'src/partials/',
+		distStyles: 'dist/css/',
+	};
+
 	grunt.initConfig({
+		buildConfig: buildConfig,
 
 		connect: {
 			server: {
@@ -17,22 +26,26 @@ module.exports = function(grunt) {
 			dist: {
 				options: {
 					style: 'expanded',
-					cacheLocation: 'src/styles/.sass-cache'
+					cacheLocation: '<%= buildConfig.srcStyles  %>.sass-cache'
 				},
 				files: {
-					'dist/css/styles.css': 'src/styles/styles.scss',
+					'<%= buildConfig.distStyles  %>styles.css': '<%= buildConfig.srcStyles  %>styles.scss',
 				}
 			}
 		},
 
 		watch: {
-			css: {
-				files: 'src/styles/*.scss',
-				tasks: ['sass', 'cssmin', 'uncss', 'sizediff', 'notify:css'],
-			},
+			// css: {
+			// 	files: '<%= buildConfig.srcStyles  %>*.scss',
+			// 	tasks: ['sass', 'cssmin', 'uncss', 'sizediff', 'notify:css', 'clean'],
+			// },
+			devcss: {
+				files: '<%= buildConfig.srcStyles  %>*.scss',
+				tasks: ['sass', 'cssmin'],
+			},			
 			pages: {
-				files: ['src/pages/*.hbt', 'src/partials/*.partial', 'src/pages/*.json'],
-				tasks: ['staticHandlebars:pages', 'notify:template'],
+				files: ['<%= buildConfig.srcPages  %>*.hbt', '<%= buildConfig.srcPartials  %>*.partial', '<%= buildConfig.srcPages  %>*.json'],
+				tasks: ['staticHandlebars:pages', 'clean', 'notify:template'],
 			},
 			options: {
 				livereload: true,
@@ -45,11 +58,11 @@ module.exports = function(grunt) {
 					filesRoot:'src/',
 					partialExtension: 'partial',
 				},
-				json: 'src/pages/default.json',
+				json: '<%= buildConfig.srcPages  %>default.json',
 				sourceView:true
 			},
 			pages: {
-				files:{'dist/*.html':'src/pages/*.hbt'}
+				files:{'dist/*.html':'<%= buildConfig.srcPages  %>*.hbt'}
 			},
 		},
 
@@ -71,7 +84,7 @@ module.exports = function(grunt) {
 		uncss: {
 			dist: {
 				files: {
-					'dist/css/styles.min.css': ['dist/index.html','dist/**/*.html'],
+					'<%= buildConfig.distStyles  %>styles.min.css': ['dist/index.html','dist/*.html'],
 				}
 			}
 		},
@@ -79,16 +92,18 @@ module.exports = function(grunt) {
 		cssmin: {
 			combine: {
 				files: {
-					'dist/css/styles.min.css': ['dist/css/styles.css']
+					'<%= buildConfig.distStyles  %>styles.min.css': ['<%= buildConfig.distStyles  %>styles.css']
 				}
 			}
 		},
 
 		sizediff: {
 			dist: {
-				src: ['dist/css/styles.css', 'dist/css/styles.min.css']
+				src: ['<%= buildConfig.distStyles  %>styles.css', '<%= buildConfig.distStyles  %>styles.min.css']
 			}
 		},
+
+		clean: ['src/index.html', 'src/js-dev/', 'index.html', '<%= buildConfig.srcStyles  %>.sass-cache'],
 
 	});	
 	
@@ -100,6 +115,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-sizediff');
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-static-handlebars');
+	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.registerTask('default', ['connect', 'watch']);
 
 };

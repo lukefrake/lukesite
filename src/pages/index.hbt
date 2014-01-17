@@ -1,5 +1,6 @@
 {{> header}}
-	<div class="container">
-		
-	</div>
+	<main class="container">
+		<h1>I'm just a guy, trying to make the web a better place...</h1>
+		<h2>One class at a time.</h2>
+	</main>
 {{> footer}}
