@@ -11,6 +11,13 @@
 		margin: 0;
 		font-size: 1.2em;
 	}
+	a {
+		color: $navColor;
+		text-decoration: none;
+		&:hover, &:visited {
+			color: $navColor;
+		}
+	}	
 }
 
 .menu {
@@ -35,13 +42,6 @@
 			border-top: 0;
 		}
 	}	
-	a {
-		color: $navColor;
-		text-decoration: none;
-		&:hover, &:visited {
-			color: $navColor;
-		}
-	}
 }
 
 .burger {

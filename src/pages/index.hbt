@@ -1,6 +1,19 @@
 {{> header}}
 	<main class="container">
-		<h1>I'm just a guy, trying to make the web a better place...</h1>
-		<h2>One class at a time.</h2>
+		<section id="home" class="col-xs-12">
+			<h1>I can make websites better than I can ride a mechanical bull</h1>
+			<h2>... Promise</h2>
+		</section>
+		<section id="about" class="col-xs-12">
+			<h1>My name is Luke, I build and design websites in sunny Kent.</h1>
+			<h2>... Promise</h2>
+		</section>
+		<section id="contact" class="col-xs-12">
+			<h1>If you want to talk to me about anything then feel free to get in contact</h1>
+			<h2>Fill in the form below and ill get in contact with you as soon as possible.</h2>
+			<form>
+				
+			</form>
+		</section>
 	</main>
 {{> footer}}

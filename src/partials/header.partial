@@ -17,7 +17,7 @@
 	<body>
 		<nav class="row nav">
 			<div class="container">
-				<span class="logo">Luke Frake</span>
+				<a class="logo" href="/">Luke Frake</a>
 				<butten class="burger"></butten>
 				<span class="menu">
 					<ul class="">

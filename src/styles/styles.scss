@@ -8,9 +8,25 @@ body {
 	background: $backgroundColor;
 }
 
+.container {
+	max-width: 920px;
+}
+
+$navBarHeight: 64px;
+
 main.container {
-	background: url('/motion.gif') no-repeat right -90px;
-	height: 420px;
+	text-shadow: 1px 1px 2px #000, -1px -1px 2px #000, -1px 1px 2px #000, 1px -1px 2px #000;
+	color: #FFF;
+	padding: 0;
+}
+
+section {
+	height: 410px;
+	background: url('/media/bull.gif') no-repeat right center;
+	display: inline-block;
+	h1 {
+		margin-top: $navBarHeight;
+	}
 }
 
 // My styles
