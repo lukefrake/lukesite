@@ -20,12 +20,29 @@ $screen-xs-max: ($screen-sm-min - 1);
 $screen-sm-max: ($screen-md-min - 1);
 $screen-md-max: ($screen-lg-min - 1);
 
+$lighterGrey: #E8E8F2;
+$lightGrey: #DCDCE5;
+$grey: #C3C4CC;
+$darkerGrey: #9F9FA6;
+$darkestGrey: #626266;
+
+$lighterBlue: #4B4CF2;
+$lightBlue: #4748E5;
+$blue: #3F40CC;
+$darkerBlue: #3334A6;
+$darkestBlue: #202066;
+
 $grid-columns: 12;
 $grid-gutter-width: 30px;
 
 // Branding
-$backgroundColor: #FFF5EE;
+$backgroundColor: #FFF;
 
 $navColor: #FFF5EE;
-$navBackgroundColor: #000;
+$navBackgroundColor: $lightBlue;
 $navBorder: #555;
+
+$firstTyle: $lightGrey;
+$secondTyle: $grey;
+$thirdTyle: $darkerGrey;
+$thirdTyleColor: $navColor;

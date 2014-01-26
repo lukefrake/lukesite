@@ -8,12 +8,6 @@ body {
 	background: $backgroundColor;
 }
 
-.container {
-	max-width: 920px;
-}
-
-$navBarHeight: 64px;
-
 main.container {
 	text-shadow: 1px 1px 2px #000, -1px -1px 2px #000, -1px 1px 2px #000, 1px -1px 2px #000;
 	color: #FFF;
@@ -21,11 +15,25 @@ main.container {
 }
 
 section {
-	height: 410px;
-	background: url('/media/bull.gif') no-repeat right center;
+	min-height: 410px;
 	display: inline-block;
+	&.intro {
+		background-color: $firstTyle;
+		margin-top: 64px;
+	}
+	&.about {
+		background-color: $secondTyle;
+	}
+	&.contact {
+		background-color: $thirdTyle;
+		color: $thirdTyleColor;
+	}
 	h1 {
-		margin-top: $navBarHeight;
+		margin-top: 20px;
+	}
+	img {
+		float: right;
+		max-width: 100%;
 	}
 }
 

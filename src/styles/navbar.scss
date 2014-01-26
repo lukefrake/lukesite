@@ -3,6 +3,10 @@
 	color: $navColor;
 	margin: 0;
 	padding: 20px 0;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 3;	
 	.logo {
 		float: left;
 		display: inline-block;

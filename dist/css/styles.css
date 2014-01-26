@@ -1192,11 +1192,7 @@ hr {
   }
 }
 body {
-  background: seashell;
-}
-
-.container {
-  max-width: 920px;
+  background: white;
 }
 
 main.container {
@@ -1206,19 +1202,37 @@ main.container {
 }
 
 section {
-  height: 410px;
-  background: url("/media/bull.gif") no-repeat right center;
+  min-height: 410px;
   display: inline-block;
 }
-section h1 {
+section.intro {
+  background-color: #dcdce5;
   margin-top: 64px;
+}
+section.about {
+  background-color: #c3c4cc;
+}
+section.contact {
+  background-color: #9f9fa6;
+  color: seashell;
+}
+section h1 {
+  margin-top: 20px;
+}
+section img {
+  float: right;
+  max-width: 100%;
 }
 
 .nav {
-  background-color: black;
+  background-color: #4748e5;
   color: seashell;
   margin: 0;
   padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 3;
 }
 .nav .logo {
   float: left;
