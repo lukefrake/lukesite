@@ -1,0 +1,46 @@
+.skills {
+	.skill, .skillContainer {
+		float: left;
+		margin: 10px 0;
+	}
+	.skills {
+		float: left;
+		width: 50%;
+	}
+	.skill {
+		clear: left;
+		width: 20%;
+	}
+	.skillContainer,
+	.skillBar {
+		border-radius: 10px;
+	}
+	.skillContainer {
+		width: 80%;
+		border: 1px solid $skillContainerColor;
+		box-shadow: inset 0px 3px 6px -4px $skillContainerColor;
+		background-color: #FFF;
+		height: 20px;
+		padding: 2px;
+	}
+	.skillBar {
+		height: 100%;
+		background-color: $skillBarColor;
+		display: block;
+	}
+	.pro {
+		width: 100%;
+	}
+	.semiPro {
+		width: 80%;
+	}
+	.average {
+		width: 60%;
+	}
+	.poor {
+		width: 40%;
+	}
+	.terrible {
+		width: 20%;
+	}
+}

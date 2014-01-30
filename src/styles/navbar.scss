@@ -1,12 +1,12 @@
 .nav {
-	background-color: $navBackgroundColor;
-	color: $navColor;
 	margin: 0;
 	padding: 20px 0;
 	position: fixed;
 	width: 100%;
 	top: 0;
 	z-index: 3;	
+	background-color: $navBackgroundColor;
+	border-bottom: 10px solid $navBorder;
 	.logo {
 		float: left;
 		display: inline-block;
@@ -40,7 +40,7 @@
 	}
 	li {
 		display: block;
-		border-top: 1px solid $navBorder;
+		border-top: 1px solid $navSeperatorBorder;
 		text-align: right;
 		&:first-child {
 			border-top: 0;

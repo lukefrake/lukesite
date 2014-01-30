@@ -20,29 +20,24 @@ $screen-xs-max: ($screen-sm-min - 1);
 $screen-sm-max: ($screen-md-min - 1);
 $screen-md-max: ($screen-lg-min - 1);
 
-$lighterGrey: #E8E8F2;
-$lightGrey: #DCDCE5;
-$grey: #C3C4CC;
-$darkerGrey: #9F9FA6;
-$darkestGrey: #626266;
-
-$lighterBlue: #4B4CF2;
-$lightBlue: #4748E5;
-$blue: #3F40CC;
-$darkerBlue: #3334A6;
-$darkestBlue: #202066;
-
 $grid-columns: 12;
 $grid-gutter-width: 30px;
 
-// Branding
-$backgroundColor: #FFF;
+// Default Colors
+$darkBlue: #225378;
+$medBlue: #1695A3;
+$lightBlue: #ACF0F2;
+$offWhite: #F3FFE2;
+$orange: #EB7F00;
+$offBlack: #333;
 
-$navColor: #FFF5EE;
-$navBackgroundColor: $lightBlue;
-$navBorder: #555;
+$backgroundColor: $offWhite;
+$bodyColor: $offBlack;
 
-$firstTyle: $lightGrey;
-$secondTyle: $grey;
-$thirdTyle: $darkerGrey;
-$thirdTyleColor: $navColor;
+$navColor: $offWhite;
+$navBackgroundColor: $darkBlue;
+$navBorder: $medBlue;
+$navSeperatorBorder: $lightBlue;
+
+$skillContainerColor: $darkBlue;
+$skillBarColor: $medBlue;

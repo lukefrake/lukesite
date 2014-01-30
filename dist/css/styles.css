@@ -1192,47 +1192,45 @@ hr {
   }
 }
 body {
-  background: white;
+  background: #f3ffe2;
+  color: #333333;
 }
 
-main.container {
-  text-shadow: 1px 1px 2px #000, -1px -1px 2px #000, -1px 1px 2px #000, 1px -1px 2px #000;
-  color: #FFF;
-  padding: 0;
+main {
+  margin-top: 74px;
 }
 
-section {
-  min-height: 410px;
-  display: inline-block;
+.intro h1 {
+  margin: 10% auto;
+  display: block;
+  text-align: center;
+  font-size: 3em;
 }
-section.intro {
-  background-color: #dcdce5;
-  margin-top: 64px;
+
+* {
+  line-height: 2em;
+  font-weight: 300;
+  letter-spacing: 1px;
 }
-section.about {
-  background-color: #c3c4cc;
+
+a {
+  color: #eb7f00;
+  text-decoration: underline;
 }
-section.contact {
-  background-color: #9f9fa6;
-  color: seashell;
-}
-section h1 {
-  margin-top: 20px;
-}
-section img {
-  float: right;
-  max-width: 100%;
+a:hover {
+  color: #eb7f00;
+  text-decoration: none;
 }
 
 .nav {
-  background-color: #4748e5;
-  color: seashell;
   margin: 0;
   padding: 20px 0;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 3;
+  background-color: #225378;
+  border-bottom: 10px solid #1695a3;
 }
 .nav .logo {
   float: left;
@@ -1243,11 +1241,11 @@ section img {
   font-size: 1.2em;
 }
 .nav a {
-  color: seashell;
+  color: #f3ffe2;
   text-decoration: none;
 }
 .nav a:hover, .nav a:visited {
-  color: seashell;
+  color: #f3ffe2;
 }
 
 .menu {
@@ -1267,7 +1265,7 @@ section img {
 }
 .menu li {
   display: block;
-  border-top: 1px solid #555555;
+  border-top: 1px solid #acf0f2;
   text-align: right;
 }
 .menu li:first-child {
@@ -1296,7 +1294,7 @@ section img {
   .menu li {
     display: inline-block;
     border-top: 0;
-    border-left: 1px solid #555555;
+    border-left: 1px solid #1695a3;
     padding-left: 5px;
   }
   .menu li:first-child {
@@ -1311,4 +1309,48 @@ section img {
   .burger {
     display: none;
   }
+}
+.skills .skill, .skills .skillContainer {
+  float: left;
+  margin: 10px 0;
+}
+.skills .skills {
+  float: left;
+  width: 50%;
+}
+.skills .skill {
+  clear: left;
+  width: 20%;
+}
+.skills .skillContainer,
+.skills .skillBar {
+  border-radius: 10px;
+}
+.skills .skillContainer {
+  width: 80%;
+  border: 1px solid #225378;
+  box-shadow: inset 0px 3px 6px -4px #225378;
+  background-color: #FFF;
+  height: 20px;
+  padding: 2px;
+}
+.skills .skillBar {
+  height: 100%;
+  background-color: #1695a3;
+  display: block;
+}
+.skills .pro {
+  width: 100%;
+}
+.skills .semiPro {
+  width: 80%;
+}
+.skills .average {
+  width: 60%;
+}
+.skills .poor {
+  width: 40%;
+}
+.skills .terrible {
+  width: 20%;
 }

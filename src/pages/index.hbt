@@ -1,25 +1,37 @@
 {{> header}}
-	<main class="">
-		<section class="intro col-xs-12">
-			<div class="container">
-				<h1>I can make websites better than I can ride a mechanical bull</h1>
-				<h2>... Promise</h2>
-				<img src="/media/bull.gif"/>
+	<main class="container">
+		<section class="intro row">
+			<div class="col-xs-12">
+				<h1>My name is Luke</h1>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<h2>I love doing what I do</h2>
+				<h3>and I wouldn't change it for the world</h3>
+				<p>If you would like to work with me on something you can <a href="mailto:lukefrake@gmail.com" target="_blank">email me at luke.frake@gmail.com</a></p>
+			</div>			
+			<div class="skills col-xs-12 col-sm-6">
+				<h2>Hey look... things I do!</h2>
+				<p class="skill">HTML</p>
+				<div class="skillContainer">
+					<span class="skillBar pro"></span>
+				</div>
+				<p class="skill">CSS</p>
+				<div class="skillContainer">
+					<span class="skillBar pro"></span>
+				</div>
+				<p class="skill">Javascript</p>
+				<div class="skillContainer">
+					<span class="skillBar average"></span>
+				</div>
+				<p class="skill">UX</p>
+				<div class="skillContainer">
+					<span class="skillBar semiPro"></span>
+				</div>
+				<p class="skill">Design</p>
+				<div class="skillContainer">
+					<span class="skillBar poor"></span>
+				</div>
 			</div>
 		</section>
-		<section class="about col-xs-12">
-			<div class="container">
-				<h1>Me</h1>
-				<h2>I've designed and built websites for a few years now and</h2>
-				<img src="/media/postits.gif"/>
-			</div>
-		</section>
-		<section class="contact col-xs-12">
-			<div class="container">
-				<h1>Me</h1>
-				<h2>I've designed and built websites for a few years now and</h2>
-				<img src="/media/bull.gif"/>
-			</div>
-		</section>		
 	</main>
 {{> footer}}
