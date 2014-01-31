@@ -1,7 +1,6 @@
 .skills {
 	.skill, .skillContainer {
 		float: left;
-		margin: 10px 0;
 	}
 	.skills {
 		float: left;
@@ -22,6 +21,7 @@
 		background-color: #FFF;
 		height: 20px;
 		padding: 2px;
+		margin: 17px 0;
 	}
 	.skillBar {
 		height: 100%;
@@ -38,9 +38,9 @@
 		width: 60%;
 	}
 	.poor {
-		width: 40%;
+		width: 45%;
 	}
 	.terrible {
-		width: 20%;
+		width: 30%;
 	}
 }

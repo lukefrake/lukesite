@@ -1200,13 +1200,6 @@ main {
   margin-top: 73px;
 }
 
-.intro h1 {
-  margin: 10% auto;
-  display: block;
-  text-align: center;
-  font-size: 3em;
-}
-
 * {
   line-height: 2em;
   font-weight: 300;
@@ -1221,6 +1214,17 @@ a {
 a:hover {
   color: #eb7f00;
   text-decoration: none;
+}
+
+.intro h1 {
+  margin: 8% auto;
+  display: block;
+  text-align: center;
+  font-size: 3em;
+}
+
+.information p {
+  float: left;
 }
 
 .nav {
@@ -1313,7 +1317,6 @@ a:hover {
 }
 .skills .skill, .skills .skillContainer {
   float: left;
-  margin: 10px 0;
 }
 .skills .skills {
   float: left;
@@ -1334,6 +1337,7 @@ a:hover {
   background-color: #FFF;
   height: 20px;
   padding: 2px;
+  margin: 17px 0;
 }
 .skills .skillBar {
   height: 100%;
@@ -1350,8 +1354,8 @@ a:hover {
   width: 60%;
 }
 .skills .poor {
-  width: 40%;
+  width: 45%;
 }
 .skills .terrible {
-  width: 20%;
+  width: 30%;
 }

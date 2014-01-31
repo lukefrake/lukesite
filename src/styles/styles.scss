@@ -13,15 +13,6 @@ main {
 	margin-top: 73px;
 }
 
-.intro {
-	h1 {
-		margin: 10% auto;
-		display: block;
-		text-align: center;
-		font-size: 3em;
-	}
-}
-
 * {
 	line-height: 2em;
 	font-weight: 300;
@@ -35,6 +26,21 @@ a {
 	&:hover {
 		color: $orange;
 		text-decoration: none;
+	}
+}
+
+.intro {
+	h1 {
+		margin: 8% auto;
+		display: block;
+		text-align: center;
+		font-size: 3em;
+	}
+}
+
+.information {
+	p {
+		float: left;
 	}
 }
 
