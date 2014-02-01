@@ -26,11 +26,14 @@ a {
 }
 
 .intro {
-	h1 {
-		margin: 8% auto;
+	h1, h2 {
+		margin: 8% 0 0;
 		display: block;
 		text-align: center;
 		font-size: 3em;
+	}
+	h2 {
+		margin: 0 0 8%;
 	}
 }
 
