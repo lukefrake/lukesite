@@ -1,16 +1,17 @@
 {{> header}}
-	<main class="container">
+	<main class="container" itemscope itemtype="http://schema.org/Person">
 		<section class="intro row">
 			<div class="col-xs-12">
-				<h1>My name is Luke</h1>
+				<h1>My name is <span itemprop="name">Luke</span></h1>
 			</div>
 			<div class="col-xs-12 col-sm-6 information">
 				<h2>I love doing what I do</h2>
-				<p>I have had the joy of working with some brilliant people before and would love to work with more</p>
-				<p>If you would like to work with me on something you can <a href="mailto:lukefrake@gmail.com" target="_blank">email me at luke.frake@gmail.com</a></p>
+				<p>I'm a <span itemprop="jobTitle">Web Developer</span> from <span itemprop="addressRegion">Kent</span>, I've have had the joy of working with some brilliant people before and would love to work with more</p>
+				<p>If you would like to chat or work with me on something you can email me at <a href="mailto:lukefrake@gmail.com" target="_blank" itemprop="email">luke.frake@gmail.com</a></p>
+				{{!<img src="janedoe.jpg" itemprop="image" />}}	
 			</div>			
 			<div class="skills col-xs-12 col-sm-6">
-				<h2>Hey look... things I do</h2>
+				<h2>Hey look... my skills</h2>
 				<p class="skill">HTML</p>
 				<div class="skillContainer">
 					<span class="skillBar pro"></span>

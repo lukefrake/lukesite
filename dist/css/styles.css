@@ -1359,3 +1359,17 @@ a:hover {
 .skills .terrible {
   width: 30%;
 }
+
+.footerContainer {
+  margin-top: 30px;
+  border-top: 1px solid #1695a3;
+  padding: 10px 0;
+}
+.footerContainer a, .footerContainer div {
+  display: inline-block;
+  text-align: right;
+}
+
+.footerInner {
+  width: 100%;
+}

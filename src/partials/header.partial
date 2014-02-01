@@ -18,5 +18,14 @@
 		<nav class="row nav">
 			<div class="container">
 				<a class="logo" href="/">Luke Frake</a>
+				{{!<butten class="burger"></butten>
+				<span class="menu">
+					<ul class="">
+						<li><a href="/" data-goto="intro">Home</a></li>
+						<li><a href="/about" data-goto="about">About</a></li>
+						<li><a href="/contact" data-goto="contact">Contact</a></li>
+						<li><a href="#" data-goto="blog">Blog</a></li>-->
+					</ul>
+				</span>}}
 			</div>
 		</nav>

@@ -1,3 +1,14 @@
 {{> header}}
-		<div class="container">Hey</div>
+	<main class="container">
+		<div itemscope itemtype="http://schema.org/LocalBusiness">
+		<a itemprop="url" href="www.lukefrake.co.uk"><div itemprop="name"><strong>Luke Frake</strong></div>
+		</a>
+		<div itemprop="description">Web Developer</div>
+		<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+		<span itemprop="addressRegion">Kent</span><br>
+		<span itemprop="postalCode">TN256RW</span><br>
+		<span itemprop="addressCountry">England</span><br>
+		</div>
+		</div>
+	</main>
 {{> footer}}

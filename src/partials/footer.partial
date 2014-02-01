@@ -1,3 +1,15 @@
+		<footer class="footerContainer container">
+			<div itemscope itemtype="http://schema.org/LocalBusiness" class="footerInner">
+			<a itemprop="url" href="http://www.lukefrake.co.uk"><div itemprop="name"><strong>Luke Frake</strong></div>
+			</a>
+			<div itemprop="description">Web Developer</div>
+			<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+			<span itemprop="addressRegion">Kent</span>
+			<span itemprop="postalCode">TN256RW</span>
+			<span itemprop="addressCountry">England</span>
+			</div>
+			</div>
+		</footer>
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
