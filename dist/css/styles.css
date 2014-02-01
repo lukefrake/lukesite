@@ -1368,6 +1368,9 @@ a:hover {
 .footerContainer a, .footerContainer div {
   display: inline-block;
   text-align: right;
+  font-size: 11px;
+  color: #333333;
+  font-weight: 300;
 }
 
 .footerInner {
