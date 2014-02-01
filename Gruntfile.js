@@ -39,7 +39,7 @@ module.exports = function(grunt) {
 		watch: {
 			css: {
 				files: '<%= buildConfig.srcStyles  %>*.scss',
-				tasks: ['sass', 'cssmin', 'uncss', 'sizediff', 'notify:css', 'clean'],
+				tasks: ['sass', 'uncss', 'cssmin', 'sizediff', 'notify:css', 'clean'],
 			},
 			// devcss: {
 			// 	files: '<%= buildConfig.srcStyles  %>*.scss',
@@ -98,7 +98,7 @@ module.exports = function(grunt) {
 		cssmin: {
 			combine: {
 				files: {
-					'<%= buildConfig.distStyles  %>styles.min.css': ['<%= buildConfig.distStyles  %>styles.css']
+					'<%= buildConfig.distStyles  %>styles.min.css': ['<%= buildConfig.distStyles  %>styles.min.css']
 				}
 			}
 		},
