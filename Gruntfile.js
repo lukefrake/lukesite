@@ -31,7 +31,7 @@ module.exports = function(grunt) {
 					cacheLocation: '<%= buildConfig.srcStyles  %>.sass-cache'
 				},
 				files: {
-					'<%= buildConfig.distStyles  %>styles.css': '<%= buildConfig.srcStyles  %>styles.scss',
+					'<%= buildConfig.distStyles  %>styles.min.css': '<%= buildConfig.srcStyles  %>styles.scss',
 				}
 			}
 		},

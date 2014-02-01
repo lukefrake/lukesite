@@ -17,7 +17,7 @@
 	<body>
 		<nav class="row nav" role=“navigation”>
 			<div class="container">
-				<a class="logo" href="/">Luke Frake</a>
+				<a class="logo" href="#">Luke Frake</a>
 				{{!<butten class="burger"></butten>
 				<span class="menu">
 					<ul class="">
