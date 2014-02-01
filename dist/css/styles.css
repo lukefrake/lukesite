@@ -1196,10 +1196,6 @@ body {
   color: #333333;
 }
 
-main {
-  margin-top: 73px;
-}
-
 * {
   line-height: 2em;
   font-weight: 300;
@@ -1230,7 +1226,6 @@ a:hover {
 .nav {
   margin: 0;
   padding: 15px 0;
-  position: fixed;
   width: 100%;
   top: 0;
   z-index: 3;
