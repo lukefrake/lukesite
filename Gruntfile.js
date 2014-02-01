@@ -6,6 +6,8 @@ module.exports = function(grunt) {
 		srcPages: 'src/pages/',
 		srcPartials: 'src/partials/',
 		distStyles: 'dist/css/',
+		distScripts: 'dist/js/',
+		srcScripts: 'src/scripts/',
 	};
 
 	grunt.initConfig({
@@ -35,17 +37,21 @@ module.exports = function(grunt) {
 		},
 
 		watch: {
-			// css: {
-			// 	files: '<%= buildConfig.srcStyles  %>*.scss',
-			// 	tasks: ['sass', 'cssmin', 'uncss', 'sizediff', 'notify:css', 'clean'],
-			// },
-			devcss: {
+			css: {
 				files: '<%= buildConfig.srcStyles  %>*.scss',
-				tasks: ['sass', 'cssmin'],
-			},			
+				tasks: ['sass', 'cssmin', 'uncss', 'sizediff', 'notify:css', 'clean'],
+			},
+			// devcss: {
+			// 	files: '<%= buildConfig.srcStyles  %>*.scss',
+			// 	tasks: ['sass', 'cssmin'],
+			// },			
 			pages: {
 				files: ['<%= buildConfig.srcPages  %>*.hbt', '<%= buildConfig.srcPartials  %>*.partial', '<%= buildConfig.srcPages  %>*.json'],
 				tasks: ['staticHandlebars:pages', 'clean', 'notify:template'],
+			},
+			scripts: {
+				files: ['<%= buildConfig.srcScripts  %>*.js'],
+				tasks: ['uglify'],
 			},
 			options: {
 				livereload: true,
@@ -103,6 +109,14 @@ module.exports = function(grunt) {
 			}
 		},
 
+		uglify: {
+			my_target: {
+				files: {
+					'<%= buildConfig.distScripts  %>main.min.js': ['<%= buildConfig.srcScripts  %>main.js']
+				}
+			}
+		},
+
 		clean: ['src/index.html', 'src/js-dev/', 'index.html', '<%= buildConfig.srcStyles  %>.sass-cache'],
 
 	});	
@@ -116,6 +130,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-static-handlebars');
 	grunt.loadNpmTasks('grunt-contrib-clean');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.registerTask('default', ['connect', 'watch']);
 
 };
