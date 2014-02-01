@@ -1,5 +1,5 @@
 {{> header}}
-	<main class="container" itemscope itemtype="http://schema.org/Person">
+	<main role="main" class="container" itemscope itemtype="http://schema.org/Person">
 		<section class="intro row">
 			<div class="col-xs-12">
 				<h1>My name is <span itemprop="name">Luke</span></h1>
