@@ -12,9 +12,10 @@
 				<h2>I love doing what I do</h2>
 				<p>I'm a <span itemprop="jobTitle">Web Developer</span> from <span itemprop="addressRegion">Kent</span>, I've had the joy of working with some brilliant people before and would love to work with more</p>
 				<p>If you would like to chat or work with me on anything, you can email me at <a href="mailto:lukefrake@gmail.com" target="_blank" itemprop="email">luke.frake@gmail.com</a></p>
+				<p>I've had the pleasure of working with some big companies like <a target="_blank" href="http://www.legolandholidays.co.uk">Legoland Holidays</a>, <a target="_blank" href="http://www.chessingtonholidays.co.uk">Chessington Holidays</a> and some smaller ones like <a target="_blank" href="http://www.show-and-stay.co.uk">Show &amp; Stay</a> and am always looking for new projects to work with.</p>
 			</div>			
 			<div class="skills col-xs-12 col-sm-6">
-				<h2>This is how I do it</h2>
+				<h2>And this is what I do</h2>
 				<p class="skill">HTML</p>
 				<div class="skillContainer">
 					<span class="skillBar pro"></span>
