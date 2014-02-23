@@ -1,7 +1,7 @@
 .footerContainer {
 	margin-top: 30px;
 	border-top: 1px solid $navBorder;
-	padding: 10px 0;
+	padding: 10px;
 	a, div {
 		display: inline-block;
 		text-align: right;
@@ -9,8 +9,19 @@
 		color: $bodyColor;
 		font-weight: 300;
 	}
+	.address {
+		display: none;
+	}
 }
 
 .footerInner {
 	width: 100%;
+}
+
+@media all and (min-width: $screen-xs) {
+	.footerContainer {
+		.address {
+			display: inline-block;
+		}
+	}
 }

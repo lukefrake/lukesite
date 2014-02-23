@@ -8,14 +8,14 @@
 	}
 	.skill {
 		clear: left;
-		width: 20%;
+		width: 23%;
 	}
 	.skillContainer,
 	.skillBar {
 		border-radius: 10px;
 	}
 	.skillContainer {
-		width: 80%;
+		width: 77%;
 		border: 1px solid $skillContainerColor;
 		box-shadow: inset 0px 3px 6px -4px $skillContainerColor;
 		background-color: #FFF;
@@ -43,4 +43,18 @@
 	.terrible {
 		width: 30%;
 	}
+}
+
+@media all and (min-width: $screen-xs) {
+
+	.skills {
+		.skillContainer {
+			width: 80%;
+		}
+
+		.skill {
+			width: 20%;
+		}
+	}
+
 }

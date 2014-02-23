@@ -4,7 +4,7 @@
 				<a itemprop="url" href="http://www.lukefrake.co.uk"><div itemprop="name">Luke Frake</div>
 				</a>
 				<div itemprop="description">Web Developer</div>
-				<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+				<div class="address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 					<span itemprop="addressRegion">Kent</span>
 					<span itemprop="postalCode">TN256RW</span>
 					<span itemprop="addressCountry">England</span>
