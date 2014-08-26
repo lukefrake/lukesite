@@ -1,10 +1,4 @@
-Boilerplate with Sass, Grunt watch and a bit more baked in
+My micro site www.lukefrake.co.uk
 ========
 
-Make sure you have grunt CLI installed http://gruntjs.com/getting-started
-
-Clone git project
-
-Run npm install to download all packages
-
-Run grunt inside project to start running watch
+Nothing much of interest to see here...
