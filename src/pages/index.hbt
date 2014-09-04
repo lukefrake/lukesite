@@ -1,8 +1,5 @@
 {{> header}}
 	<main role="main" class="container" itemscope itemtype="http://schema.org/Person">
-		<?php
-			print_r('heyyy');
-		?> 
 		<section class="row">
 			<div class="col-xs-12 intro">
 				<h1>Hi I'm <span itemprop="name">Luke Frake</span></h1>
