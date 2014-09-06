@@ -126,16 +126,16 @@ module.exports = function(grunt) {
 	      options: {
 	        sizes: [ {
 	        	name: 'small',
-	          width: 640,
-	          quality: 30
+	          width: 340,
+	          quality: 70
 	        }, {
 	          name: 'medium',
 	          width: 640,
-	          quality: 50
+	          quality: 80
 	        }, {
 	          name: "large",
 	          width: 1024,
-	          quality: 60
+	          quality: 80
 	        } ]
 	      },
 	      files: [ {
