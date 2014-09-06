@@ -1,38 +1,26 @@
 {{> header}}
-	<main role="main" class="container" itemscope itemtype="http://schema.org/Person">
-		<section class="row">
-			<div class="col-xs-12 intro">
+	<main role="main" itemscope itemtype="http://schema.org/Person">
+		<section class="row mainContainer">
+			<div class="col-xs-12 intro tileSection">
 				<h1>Hi I'm <span itemprop="name">Luke Frake</span></h1>
-				<h2>and I build websites</h2>
+				<h2>I build, wright &amp; talk about websites.</h2>
 			</div>
-			<div class="col-xs-12 col-sm-6 information">
-				<h2>I love doing what I do</h2>
-				<p>I'm a <span itemprop="jobTitle">Web Developer</span> from <span itemprop="addressRegion">Kent</span>. I've had the joy of working with some brilliant people before and would love to work with more.</p>
-				<p>I've had the pleasure of working with some big companies like <a target="_blank" href="http://www.paultonsbreaks.com">Paultons Breaks</a> and <a target="_blank" href="http://www.legolandholidays.co.uk">Legoland Holidays</a> and some smaller ones like <a target="_blank" href="http://www.show-and-stay.co.uk">Show &amp; Stay</a> and I'm always looking for new projects to work on.</p>
-				<p>If you would like to chat or work with me on anything, you can email me at <a href="mailto:lukefrake@gmail.com" target="_blank" itemprop="email">lukefrake@gmail.com</a>.</p>
-			</div>			
-			<div class="skills col-xs-12 col-sm-6">
-				<h2>This is how I do it</h2>
-				<p class="skill">HTML</p>
-				<div class="skillContainer">
-					<span class="skillBar pro"></span>
-				</div>
-				<p class="skill">CSS</p>
-				<div class="skillContainer">
-					<span class="skillBar pro"></span>
-				</div>
-				<p class="skill">Javascript</p>
-				<div class="skillContainer">
-					<span class="skillBar average"></span>
-				</div>
-				<p class="skill">UX</p>
-				<div class="skillContainer">
-					<span class="skillBar semiPro"></span>
-				</div>
-				<p class="skill">Design</p>
-				<div class="skillContainer">
-					<span class="skillBar poor"></span>
-				</div>
+			<div class="col-xs-12 tileSection work" id="work">
+				<h1>Work</h1>
+				<h2>You can see my work <a href="/work">here.</a></h2>
+			</div>
+			<div class="col-xs-12 tileSection location">
+				<h1>Location</h1>
+				<h2>I'm usually not far for my laptop, and generally in and around <span itemprop="addressRegion">Kent.</span></h2>
+			</div>
+			<div class="col-xs-12 tileSection tech">
+				<h1>Technology</h1>
+				<h2>Nothing excites me more, then playing with new technologies. I write HTML, CSS &amp; Javascript in various forms.</h2>
+			</div>
+			<div class="col-xs-12 tileSection hire">
+				<h1>Hire</h1>
+				<h2>I love working on new projects, so talk to me about yours.</h2>
+				<a target="_blank" href="mailto:lukefrake@gmail.com" class="hireButton">Email me.</a target="_blank">
 			</div>
 		</section>
 	</main>

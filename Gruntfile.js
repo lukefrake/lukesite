@@ -41,6 +41,10 @@ module.exports = function(grunt) {
 				files: '<%= buildConfig.srcStyles  %>*.scss',
 				tasks: ['sass', 'uncss', 'cssmin', 'sizediff', 'notify:css', 'clean'],
 			},
+			imges: {
+				files: '<%= buildConfig.srcStyles  %>/media/*',
+				tasks: ['responsive_images'],
+			},			
 			// devcss: {
 			// 	files: '<%= buildConfig.srcStyles  %>*.scss',
 			// 	tasks: ['sass', 'cssmin'],
@@ -117,6 +121,32 @@ module.exports = function(grunt) {
 			}
 		},
 
+	  responsive_images: {
+	    myTask: {
+	      options: {
+	        sizes: [ {
+	        	name: 'small',
+	          width: 640,
+	          quality: 30
+	        }, {
+	          name: 'medium',
+	          width: 640,
+	          quality: 50
+	        }, {
+	          name: "large",
+	          width: 1024,
+	          quality: 60
+	        } ]
+	      },
+	      files: [ {
+	        expand: true,
+	        src: ['**.{jpg,jpeg,gif,png}'],
+	        dest: 'dist/media/',
+	        cwd: 'src/media'
+	      } ]
+	    }
+	  },
+
 		clean: ['src/index.html', 'src/js-dev/', 'index.html', '<%= buildConfig.srcStyles  %>.sass-cache'],
 
 	});	
@@ -131,6 +161,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-static-handlebars');
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-responsive-images');
 	grunt.registerTask('default', ['connect', 'watch']);
+	grunt.registerTask('images', ['responsive_images']);
 
 };
