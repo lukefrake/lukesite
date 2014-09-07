@@ -1,5 +1,6 @@
 // Import some of bootstrap because I can be lazy
 @import 'normalize';
+@import "bourbon/bourbon";
 @import 'grid';
 @import 'mixins';
 
@@ -28,23 +29,18 @@ a {
 	background-size: cover;	
 	min-height: 320px;
 	height: 110vh;
-	-webkit-justify-content: center;
-	-moz-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	display: flex;
-	flex-direction: column;
+	@include image-rendering(optimizeSpeed);
+	@include justify-content( center );
+	@include display( flex );
+	@include flex-direction( column );
 	color: #fff;
 	padding-bottom: 15px;
-	&:first-child:before {
-		display: none;
-	}
 	&:before {
 		content: "";
 		position: absolute;
 		left: 0;
 		right: 0;
-		top: -15px;
+		bottom: -15px;
 		border-top: 5px solid $navBorder;
 		border-bottom: 5px solid $navBorder;
 		background-color: $navBackgroundColor;

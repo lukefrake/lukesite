@@ -94,7 +94,7 @@ module.exports = function(grunt) {
 		uncss: {
 			dist: {
 				files: {
-					'<%= buildConfig.distStyles  %>styles.min.css': ['dist/index.html','dist/*.html'],
+					'<%= buildConfig.distStyles  %>styles.min.css': ['dist/index.html'],
 				}
 			}
 		},
