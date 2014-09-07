@@ -1,6 +1,6 @@
 {{> header}}
 	<div class="container" style="text-align: center; margin: 50px 0; font-weight: bold;">
-		I was far too excited to get this on the internet, so unfortunately. section is still under development.
+		I was far too excited to get this on the internet, so unfortunately, this section is still under development.
 		<a href="/#work">&lt; Go back?</a>
 	</div>
 {{> footer}}
