@@ -1,0 +1,119 @@
+.tileSection {
+	background-size: cover;	
+	min-height: 320px;
+	height: 110vh;
+	@include image-rendering(optimizeSpeed);
+	@include justify-content( center );
+	@include display( flex );
+	@include flex-direction( column );
+	color: #fff;
+	padding-bottom: 15px;
+	&:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: -15px;
+		border-top: 5px solid $navBorder;
+		border-bottom: 5px solid $navBorder;
+		background-color: $navBackgroundColor;
+		height: 15px;
+		z-index: 10;
+	}
+	h1, h2 {
+		display: block;
+		text-align: center;
+		font-size: 3em;
+		text-shadow: 1px 0 0 #000,
+		-1px 0 0 #000,
+		0 1px 0 #000,
+		0 -1px 0 #000,
+		1px 1px #000,
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000;
+	}
+	h2 {
+		font-size: 2.2em;
+	}	
+	.hireButton {
+		background-color: white;
+		color: black;
+		border: 1px solid black;
+		border-radius: 5px;
+		padding: 10px 30px;
+		font-weight: 500;
+		font-size: 1.6rem;
+		text-decoration: none;
+	}
+	h1,
+	h2,
+	a {
+		margin: 0 auto;
+	}
+}
+
+.intro {
+	background-image: url( "/media/desk-small.jpg" );
+	background-position: right;
+}
+
+.tech {
+	background-image: url( "/media/devices-small.jpeg" );
+}
+
+.hire {
+	background-image: url( "/media/gathering-small.jpg" ); 
+}
+
+.location {
+	background-image: url( "/media/northdowns-small.jpg" );
+}
+
+.work {
+	background-image: url( "/media/postit-small.jpg" );
+}
+
+@media (min-width: $screen-xs) {
+	.intro {
+		background-image: url( "/media/desk-medium.jpg" );
+	}
+
+	.tech {
+		background-image: url( "/media/devices-medium.jpeg" );
+	}
+
+	.hire {
+		background-image: url( "/media/gathering-medium.jpg" ); 
+	}
+
+	.location {
+		background-image: url( "/media/northdowns-medium.jpg" );
+	}
+
+	.work {
+		background-image: url( "/media/postit-medium.jpg" );
+	}	
+}
+
+@media (min-width: $screen-sm) {
+	.intro {
+		background-image: url( "/media/desk-large.jpg" );
+	}
+
+	.tech {
+		background-image: url( "/media/devices-large.jpeg" );
+	}
+
+	.hire {
+		background-image: url( "/media/gathering-large.jpg" ); 
+	}
+
+	.location {
+		background-image: url( "/media/northdowns-large.jpg" );
+	}
+
+	.work {
+		background-image: url( "/media/postit-large.jpg" );
+	}	
+}

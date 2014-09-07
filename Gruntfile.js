@@ -124,9 +124,12 @@ module.exports = function(grunt) {
 	  responsive_images: {
 	    myTask: {
 	      options: {
+	      	engine: 'im',
 	        sizes: [ {
 	        	name: 'small',
 	          width: 340,
+	          height: 400,
+	          aspectRatio: false,
 	          quality: 70
 	        }, {
 	          name: 'medium',
