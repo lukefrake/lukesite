@@ -128,17 +128,17 @@ module.exports = function(grunt) {
 	        sizes: [ {
 	        	name: 'small',
 	          width: 340,
-	          height: 400,
+	          height: 500,
 	          aspectRatio: false,
 	          quality: 70
 	        }, {
 	          name: 'medium',
 	          width: 640,
-	          quality: 80
+	          quality: 70
 	        }, {
 	          name: "large",
 	          width: 1024,
-	          quality: 80
+	          quality: 70
 	        } ]
 	      },
 	      files: [ {
