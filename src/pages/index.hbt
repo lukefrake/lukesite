@@ -7,7 +7,7 @@
 			</div>
 			<div id="location" class="col-xs-12 tileSection location darkText">
 				<h1>Location</h1>
-				<h2>I'm usually not far for my laptop, and generally in and around <span itemprop="addressRegion">Kent.</span></h2>
+				<h2>I'm normally near my laptop, generally in and around <span itemprop="addressRegion">Kent.</span></h2>
 			</div>
 			<div id="work" class="col-xs-12 tileSection work" id="work">
 				<h1>Work</h1>
