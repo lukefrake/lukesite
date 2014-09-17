@@ -1,5 +1,4 @@
 .footerContainer {
-	border-top: 1px solid $navBorder;
 	padding: 20px;
 	a, div {
 		display: inline-block;
@@ -11,10 +10,6 @@
 	.address {
 		display: none;
 	}
-}
-
-.footerInner {
-	width: 100%;
 }
 
 @media all and (min-width: $screen-xs) {
