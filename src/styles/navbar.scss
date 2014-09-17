@@ -14,9 +14,20 @@
 	}
 	a {
 		margin: 0 0 0 10px;
+		color: $navColor;
 		&:first-child {
 			margin: 0;
 		}
+		&:visited {
+			color: $navColor;
+		}
+		&:hover {
+			color: lighten( $navColor, 10% );
+		}
+		&:active {
+			position: relative;
+			top: -1px;
+		}		
 	}
 	span {
 		margin: 0 0 0 auto;
@@ -27,11 +38,7 @@
 
 .nav, .footerContainer {
 	a {
-		color: $navColor;
 		text-decoration: none;
-		&:hover, &:visited {
-			color: $navColor;
-		}
 	}	
 }
 
