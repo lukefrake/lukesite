@@ -1,0 +1,32 @@
+.caption {
+	color: #ccc;
+}
+
+.workContainer {
+	text-align: center;
+	margin: 0 auto;
+	max-width: 400px;
+}
+
+.pauImage, .ybrImage {
+	background-image: url( "/media/responsive-small.jpg" );
+	min-height: 208px;
+	background-size: contain;
+	background-repeat: no-repeat;	
+}
+
+.ybrImage {
+	background-image: url( "/media/ybr-small.jpg" );
+}
+
+@media (min-width: $screen-xs) {
+
+	.ybrImage {
+		background-image: url( "/media/ybr-medium.jpg" );
+	}
+
+	.pauImage {
+		background-image: url( "/media/responsive-medium.jpg" );
+	}
+
+}

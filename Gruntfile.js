@@ -92,9 +92,12 @@ module.exports = function(grunt) {
 		},
 
 		uncss: {
+			options: {
+				ignore: ['.caption', '.workContainer', '.ybrImage', '.pauImage']
+			},
 			dist: {
 				files: {
-					'<%= buildConfig.distStyles  %>styles.min.css': ['dist/index.html'],
+					'<%= buildConfig.distStyles  %>styles.min.css': ['dist/index.html']
 				}
 			}
 		},
@@ -121,34 +124,54 @@ module.exports = function(grunt) {
 			}
 		},
 
-	  responsive_images: {
-	    myTask: {
-	      options: {
-	      	engine: 'im',
-	        sizes: [ {
-	        	name: 'small',
-	          width: 340,
-	          height: 500,
-	          aspectRatio: false,
-	          quality: 70
-	        }, {
-	          name: 'medium',
-	          width: 640,
-	          quality: 70
-	        }, {
-	          name: "large",
-	          width: 1024,
-	          quality: 70
-	        } ]
-	      },
-	      files: [ {
-	        expand: true,
-	        src: ['**.{jpg,jpeg,gif,png}'],
-	        dest: 'dist/media/',
-	        cwd: 'src/media'
-	      } ]
-	    }
-	  },
+		responsive_images: {
+			myTask: {
+				options: {
+					engine: 'im',
+					sizes: [ {
+						name: 'small',
+						width: 340,
+						height: 500,
+						aspectRatio: false,
+						quality: 70
+					}, {
+						name: 'medium',
+						width: 640,
+						quality: 70
+					}, {
+						name: "large",
+						width: 1024,
+						quality: 70
+					} ]
+				},
+				files: [ {
+					expand: true,
+					src: ['**.{jpg,jpeg,gif,png}'],
+					dest: 'dist/media/',
+					cwd: 'src/media'
+				} ]
+			},
+			workTask: {
+				options: {
+					engine: 'im',
+					sizes: [ {
+						name: 'small',
+						width: 340,
+						quality: 70
+					}, {
+						name: 'medium',
+						width: 500,
+						quality: 70
+					} ]
+				},
+				files: [ {
+					expand: true,
+					src: ['**.{jpg,jpeg,gif,png}'],
+					dest: 'dist/media/',
+					cwd: 'src/media/work'
+				} ]
+			}		
+		},
 
 		clean: ['src/index.html', 'src/js-dev/', 'index.html', '<%= buildConfig.srcStyles  %>.sass-cache'],
 
