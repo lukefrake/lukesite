@@ -14,7 +14,7 @@
 	</head>
 	<body>
 		<nav class="row nav" role=“navigation”>
-			<div class="container">
+			<div class="col-xs-12">
 				<a class="logo" href="/">Luke Frake</a>
 				<span>
 					<a href="#location">Location</a>
